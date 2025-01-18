@@ -1,0 +1,255 @@
+/* General Reset */
+body, h1, h2, h3, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-top: 5px;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.card-button {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.card-button:hover {
+    background: linear-gradient(135deg, #8fd3f4, #84fab0);
+}
+
+/* Chatbot Section */
+.chatbox-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.chatbox-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.chatbox-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.chatbot-container, .iframe-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.chatbot-container zapier-interfaces-chatbot-embed, 
+.iframe-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-section h2 {
+    margin-bottom: 30px;
+}
+
+.faq-cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.faq-cards .card {
+    width: 300px;
+    text-align: left;
+}
+
+.faq-cards .card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.faq-cards .card p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Doctors Section */
+.doctors-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.doctors-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.doctor-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.doctor-cards .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-cards .card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.doctor-cards .card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.doctor-cards .card button {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #8fd3f4, #84fab0);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.doctor-cards .card button:hover {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.card:nth-child(odd) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(even) {
+    animation-delay: 0.6s;
+}

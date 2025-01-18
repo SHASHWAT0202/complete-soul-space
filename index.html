@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students' Mental Health Care</title>
+    <link rel="stylesheet" href="indstyle.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #93EBE0, #FFFFF0);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header.hero-section {
+            background: linear-gradient(135deg, #66a6ff, #89f7fe);
+            color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-buttons a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-buttons a:hover {
+            background: rgba(255, 255, 255,0.3);
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #8fd3f4, #84fab0);
+            border-radius: 20px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            margin: 30px 0;
+        }
+
+        .hero-text h2 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-image img {
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background-color: #66a6ff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #89f7fe;
+        }
+
+        section.features {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        #scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #66a6ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #scroll-top:hover {
+            background: #89f7fe;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="logo-container">
+            <img src="./images/logo.jpg" alt="Logo">
+            <h1>SoulSpace</h1>
+        </div>
+        <nav class="nav-buttons">
+            <a href="./index.html">Home</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./stillinstress.html">Stillin Stress</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h2>Feel Better, Be Better</h2>
+            <p>We provide support and resources to help students manage stress, anxiety, and mental health challenges.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="hero-image">
+            <img src="./images/01.jpg" alt="Mental health illustration">
+        </div>
+    </div>
+
+    <section class="features">
+        <h3>What We Offer</h3>
+        <div class="cards">
+            <div class="card">
+                <h4>Professional Counseling</h4>
+                <p>Talk to experienced counselors to find solutions and comfort.</p>
+            </div>
+            <div class="card">
+                <h4>Self-Help Resources</h4>
+                <p>Access articles, videos, and guides to improve your mental well-being.</p>
+            </div>
+            <div class="card">
+                <h4>Community Support</h4>
+                <p>Join a community that understands and supports you.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="./images/logo.jpg" alt="Logo" style="height: 40px; margin-right: 10px;">
+                <span>SoulSpace</span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-rights">
+            &copy; 2025 SoulSpace. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

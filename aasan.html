@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yoga for Mental and Physical Health</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #93EBE0, #FFFFF0);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header.hero-section {
+            background: linear-gradient(135deg, #66a6ff, #89f7fe);
+            color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-buttons a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-buttons a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .section {
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h3 {
+            color: #007c7f;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            line-height: 1.6;
+        }
+
+        .filter-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .filter-buttons button {
+            background: linear-gradient(135deg, #66a6ff, #89f7fe);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .filter-buttons button:hover {
+            background: #ffcc00;
+            color: #333;
+        }
+
+        .asana {
+            display: none;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .asana img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .asana h3 {
+            font-size: 1.5rem;
+            color: #00bfae;
+            margin: 15px 0;
+        }
+
+        .asana p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .asana.active {
+            display: block;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        #scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #66a6ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #scroll-top:hover {
+            background: #89f7fe;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="logo-container">
+            <img src="./images/logo.jpg" alt="Logo">
+            <h1>SoulSpace</h1>
+        </div>
+        <nav class="nav-buttons">
+            <a href="./index.html">Home</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./stillinstress.html">Stillin Stress</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="section" id="yoga-animations">
+        <h3>Yoga in an Animated Way</h3>
+        <p>Experience yoga through animated sequences that demonstrate poses step by step. These animations simplify complex asanas, making them easier to learn and practice. Visual aids ensure proper posture and alignment.</p>
+    </div>
+
+    <div class="section" id="relax-brain-articles">
+        <h3>Articles to Relax Your Brain</h3>
+        <p>Explore insightful articles that guide you through mindfulness, relaxation techniques, and tips for a stress-free life. These articles are curated to help you unwind and rejuvenate mentally.</p>
+    </div>
+
+    <div class="section" id="yoga-benefits">
+        <h3>Benefits of Yoga and Meditation</h3>
+        <ul>
+            <li>Improves flexibility, balance, and strength.</li>
+            <li>Reduces stress and promotes relaxation.</li>
+            <li>Enhances focus and mental clarity.</li>
+            <li>Boosts overall physical and mental well-being.</li>
+            <li>Encourages mindfulness and better breathing techniques.</li>
+        </ul>
+    </div>
+
+    <div class="filter-buttons">
+        <button onclick="filterAsanas('all')">Show All</button>
+        <button onclick="filterAsanas('backpain')">Back Pain Relief</button>
+        <button onclick="filterAsanas('stress')">Stress Relief</button>
+        <button onclick="filterAsanas('flexibility')">Flexibility Improvement</button>
+        <button onclick="filterAsanas('digestion')">Better Digestion</button>
+        <button onclick="filterAsanas('energy')">Boost Energy</button>
+    </div>
+
+    <div id="asanas">
+        <div class="asana backpain stress">
+            <img src="./images/headstand.jpg" alt="Headstand">
+            <h3><a href="./headstand.html">Headstand (Sīrṣāsana)</a></h3>
+            <p>Improves balance and reduces stress. Beneficial for back pain relief and mental clarity.</p>
+        </div>
+
+        <div class="asana flexibility">
+            <img src="./images/shoulderstand.jpg" alt="Shoulderstand">
+            <h3><a href="./shoulder.html">Shoulderstand (Sarvāṇgāsana)</a></h3>
+            <p>Enhances flexibility and improves blood circulation.</p>
+        </div>
+
+        <div class="asana digestion">
+            <img src="./images/plough.jpg" alt="Plough Pose">
+            <h3><a href="./plough.html">Plough Pose (Halāsana)</a></h3>
+            <p>Stimulates the digestive system and improves posture.</p>
+        </div>
+
+        <div class="asana stress">
+            <img src="./images/fish.jpg" alt="Fish Pose">
+            <h3><a href="./fishpose.html">Fish Pose (Matsyāsana)</a></h3>
+            <p>Opens up the chest and helps relieve stress and fatigue.</p>
+        </div>
+
+        <div class="asana backpain">
+            <img src="./images/cobra.jpg" alt="Cobra Pose">
+            <h3><a href="./cobra.html">Cobra Pose (Bhujangāsana)</a></h3>
+            <p>Strengthens the spine and alleviates back pain.</p>
+        </div>
+
+        <div class="asana energy">
+            <img src="./images/sun.jpg" alt="Sun Salutation">
+            <h3><a href="./sun.html">Sun Salutation (Surya Namaskara)</a></h3>
+            <p>A great way to boost energy and stimulate all body systems.</p>
+        </div>
+
+        <div class="asana backpain">
+            <img src="./images/triangle.jpg" alt="Triangle Pose">
+            <h3><a href="./triangle.html">Triangle Pose (Trikoṇāsana)</a></h3>
+            <p>Strengthens the spine and alleviates back pain.</p>
+        </div>
+
+        <div class="asana digestion">
+            <img src="./images/bow.jpg" alt="Bow Pose">
+            <h3><a href="./bow.html">Bow Pose (Dhanurāsana)</a></h3>
+            <p>Strengthens the spine and alleviates back pain.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="./images/logo.jpg" alt="SoulSpace Logo">
+                <h1>SoulSpace</h1>
+            </div>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">GitHUb</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <p>&copy; 2025 SoulSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-top">↑</button>
+
+    <script>
+        function filterAsanas(type) {
+            const asanas = document.querySelectorAll('.asana');
+            asanas.forEach(asana => {
+                if (type === 'all' || asana.classList.contains(type)) {
+                    asana.classList.add('active');
+                } else {
+                    asana.classList.remove('active');
+                }
+            });
+        }
+
+        // Scroll to top button visibility
+        window.onscroll = function () {
+            const scrollButton = document.getElementById('scroll-top');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+
+        document.getElementById('scroll-top').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

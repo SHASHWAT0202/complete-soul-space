@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Student Mental Health</title>
+    <link rel="stylesheet" href="/about.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(135deg, #93EBE0, #FFFFF0);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header.hero-section {
+            background: linear-gradient(135deg, #66a6ff, #89f7fe);
+            color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-buttons a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-buttons a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        #about-us {
+            background: white;
+            border-radius: 15px;
+            margin: 30px auto;
+            padding: 30px;
+            max-width: 1100px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        #about-us img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .about-text {
+            color: #555;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* Mission and Vision Card Styles */
+        #mission-vision-values {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            justify-content: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .mission-vision-card {
+            background: white;
+            border-radius: 15px;
+            width: 45%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mission-vision-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .mission-vision-card h2 {
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            color: #333;
+        }
+
+        .mission-vision-card p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        #team {
+            padding: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        #team h2 {
+    text-align: center;  /* Centers the text */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center; /* Centers the team cards */
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .team-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .team-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .team-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .team-card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        #scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #66a6ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #scroll-top:hover {
+            background: #89f7fe;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <div class="logo-container">
+            <img src="./images/logo.jpg" alt="Logo">
+            <h1>SoulSpace</h1>
+        </div>
+        <nav class="nav-buttons">
+            <a href="./index.html">Home</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./stillinstress.html">Stillin Stress</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p class="about-text">
+            At MindCare, we are passionate about creating a supportive environment where students can thrive emotionally and academically. Our mission is to address the challenges of academic stress and peer pressure, offering guidance, resources, and a safe space for students to share their experiences.
+        </p>
+        <img src="./images/aboutus.jpg" alt="About Us">
+    </section>
+
+    <section id="mission-vision-values">
+        <div class="mission-vision-card">
+            <h2>Our Mission</h2>
+            <p>To empower students to overcome mental health challenges and achieve academic success by providing resources, counseling, and community support.</p>
+        </div>
+        <div class="mission-vision-card">
+            <h2>Our Vision</h2>
+            <p>To create a world where students feel valued, understood, and supported, helping them lead fulfilling lives both academically and personally.</p>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="./images/shashwat.jpg" alt="Team Member">
+                <h3>Shashwat Ranjan</h3>
+                <p>Team Lead,Chatbot & Flask Developer</p>
+            </div>
+            <div class="team-card">
+                <img src="./images/navya.jpg" alt="Team Member">
+                <h3>Navya Jaidka</h3>
+                <p>Frontend Developer</p>
+            </div>
+            <div class="team-card">
+                <img src="./images/jp.jpg" alt="Team Member">
+                <h3>Jayapramod Manikantan</h3>
+                <p>Research papers and Blogs</p>
+            </div>
+            <div class="team-card">
+                <img src="./images/sabhya.jpg" alt="Team Member">
+                <h3>Sabhya Rajvanshi</h3>
+                <p>Mood Tracer ML model Developers.</p>
+            </div>
+        </div>
+    </section>
+
+    <button id="scroll-top">&#8679;</button>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="./images/logo.jpg" alt="Logo" style="height: 40px; margin-right: 10px;">
+                <span>SoulSpace</span>
+            </div>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-rights">
+            &copy; 2025 SoulSpace. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Scroll-to-top button functionality
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

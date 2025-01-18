@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearby Doctors - Stillin Stress</title>
+  
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(135deg, #93EBE0 , #FFFFF0);
+          color: #333;
+          line-height: 1.6;
+          overflow-x: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100vh;
+      }
+
+      header {
+          background: linear-gradient(135deg, #66a6ff, #89f7fe);
+          color: white;
+          padding: 15px 25px; /* Adjusted padding for consistent size */
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          font-size: 1.2rem; /* Adjusted font size */
+      }
+
+      .navbar-logo {
+          display: flex;
+          align-items: center;
+      }
+
+      .navbar-logo img {
+          height: 45px; /* Adjusted image size */
+          margin-right: 10px;
+      }
+
+      .navbar-logo h1 {
+          font-size: 1.4rem; /* Adjusted font size */
+          font-weight: bold;
+      }
+
+      .navbar-links {
+          display: flex;
+          gap: 15px;
+      }
+
+      .navbar-links a {
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          padding: 8px 15px; /* Adjusted padding */
+          border-radius: 20px;
+          transition: background 0.3s ease;
+      }
+
+      .navbar-links a:hover {
+          background: rgba(255, 255, 255, 0.3);
+      }
+
+      section {
+          padding: 20px;
+      }
+
+      .doctors-section h2, .faq-section h2 {
+          text-align: center;
+          margin-bottom: 20px;
+          font-size: 1.8rem;
+          color: #333;
+      }
+
+      .doctor-cards, .faq-cards {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
+      }
+
+      .card {
+          background: #fff;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          width: 280px;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      button {
+          background-color: #66a6ff;
+          color: white;
+          border: none;
+          border-radius: 20px;
+          padding: 10px 15px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+          background-color: #89f7fe;
+      }
+
+      footer {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        #scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #66a6ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #scroll-top:hover {
+            background: #89f7fe;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar-logo">
+        <img src="./images/logo.jpg" alt="Logo">
+        <h1>SoulSpace</h1>
+    </div>
+    <nav class="navbar-links">
+      <a href="./index.html">Home</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./stillinstress.html">Stillin Stress</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="doctors-section">
+    <h2>Find Support Near You</h2>
+    <div class="doctor-cards">
+      <div class="card">
+        <h3>Dr. Susan Bright</h3>
+        <p>Specialist in Anxiety and Depression</p>
+        <button onclick="window.open('https://maps.google.com?q=Dr.+Susan+Bright')">Locate</button>
+      </div>
+      <div class="card">
+        <h3>Dr. Alex Heart</h3>
+        <p>Psychiatrist - 10+ years of experience</p>
+        <button onclick="window.open('https://maps.google.com?q=Dr.+Alex+Heart')">Locate</button>
+      </div>
+      <div class="card">
+        <h3>Dr. Lily Mind</h3>
+        <p>Specialist in Stress Management</p>
+        <button onclick="window.open('https://maps.google.com?q=Dr.+Lily+Mind')">Locate</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>FAQs</h2>
+    <div class="faq-cards">
+      <div class="card">
+        <h3>Do I need an appointment?</h3>
+        <p>Yes, most specialists recommend booking an appointment in advance.</p>
+      </div>
+      <div class="card">
+        <h3>How do I find their clinics?</h3>
+        <p>Click on the "Locate" button to open Google Maps for directions.</p>
+      </div>
+      <div class="card">
+        <h3>Are online consultations available?</h3>
+        <p>Some doctors offer virtual consultations. Please check with them.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+        <div class="logo-container">
+            <img src="./images/logo.jpg" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <span>SoulSpace</span>
+        </div>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+    <div class="footer-rights">
+        &copy; 2025 SoulSpace. All Rights Reserved.
+    </div>
+</footer>
+</body>
+</html>

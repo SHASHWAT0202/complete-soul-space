@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #93EBE0, #FFFFF0);
+        }
+
+        .blog-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .blog-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        .blog-header p {
+            color: #555;
+        }
+
+        .blog-snippet {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-snippet h2 {
+            color: #66a6ff;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-snippet p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-family: 'Georgia', serif;
+        }
+
+        .author {
+            font-size: 1.1rem;
+            font-weight: normal;
+            color: #555;
+            font-style: italic;
+        }
+
+        .thoughts-section {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .thought {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #66a6ff;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        header.hero-section {
+            background: linear-gradient(135deg, #66a6ff, #89f7fe);
+            color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-buttons a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-buttons a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-content .logo-container img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero-section">
+    <div class="logo-container">
+        <img src="./images/logo.jpg" alt="Logo">
+        <h1>SoulSpace</h1>
+    </div>
+    <nav class="nav-buttons">
+        <a href="./index.html">Home</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./stillinstress.html">Stillin Stress</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<section class="blog-section" id="home">
+    <div class="blog-header">
+        <h1>Motivational Insights</h1>
+        <p>Discover the power of purpose, perseverance, and passion.</p>
+    </div>
+
+    <!-- Blog Snippets -->
+    <div class="blog-snippet">
+        <h2>On the Power of Purpose (Ikigai)</h2>
+        <p>"Our ikigai is hidden deep inside each of us, and finding it requires a patient search. According to those born on Okinawa, the island with the most centenarians in the world, our ikigai is the reason we get up in the morning. Having a clearly defined ikigai brings satisfaction, happiness, and meaning to our lives."</p>
+    </div>
+
+    <div class="blog-snippet">
+        <h2>On Resilience and Perseverance</h2>
+        <p>"The happiest people are not the ones who achieve the most. They are the ones who spend more time than others in a state of flow. Whether working, walking, cleaning, or cooking, their mind is completely immersed in the task at hand. They lose themselves in the moment. They forget their worries, and that gives them a sense of purpose and fulfillment."</p>
+    </div>
+
+    <div class="blog-snippet">
+        <h2>On the Secrets of Longevity</h2>
+        <p>"Nurturing friendships, eating light, getting enough rest, and doing regular, moderate exercise are all part of the equation of good health, but at the heart of the joy that inspires these centenarians to keep celebrating birthdays and cherishing each new day is their ikigai. Because those who discover their ikigai have everything they need for a long and joyful journey through life."</p>
+    </div>
+
+    <div class="blog-snippet">
+        <h2>On the Joy of Community</h2>
+        <p>"In Okinawa, people live by the principle of 'ichariba chode,' a local expression that means ‘treat everyone like a brother, even if you’ve never met them before.’ This sense of belonging and community helps foster happiness and a sense of security, which contributes to their remarkable longevity."</p>
+    </div>
+
+    <div class="blog-snippet">
+        <h2>On Facing Challenges</h2>
+        <p>"What we need is not a peaceful existence, but a challenge we can strive to meet by applying all the skills at our disposal. A stoic attitude—serenity in the face of setbacks—helps keep you young, as it lowers anxiety and stress levels and stabilizes behavior."</p>
+    </div>
+
+    <div class="blog-snippet">
+        <h2>On Flow and Fulfillment</h2>
+        <p>"When we focus on the present and enjoy what we do, we create a state of flow—a space where time seems to disappear, and our work or actions feel effortless and enjoyable. This is where we find our deepest happiness."</p>
+    </div>
+
+    <!-- Motivational Thoughts in a Single Snippet -->
+    <div class="thoughts-section">
+        <h2 style="text-align: center; color: #2c3e50; font-size: 2rem;">Top Motivational Thoughts</h2>
+
+        <div class="thought">
+            <p class="quote">"The path to success is to take massive, determined action. Most people overestimate what they can do in a year and underestimate what they can do in two or three decades. Be committed to constant and never-ending improvement. That’s how you create breakthroughs."</p>
+            <p class="author">~ Tony Robbins, Author of "Awaken the Giant Within"</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"Shoot for the moon. Even if you miss, you’ll land among the stars. Life has no limitations except the ones you make. You don’t have to be great to get started, but you have to get started to be great."</p>
+            <p class="author">~ Les Brown, Motivational Speaker and Author of "Live Your Dreams"</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"Your attitude, not your aptitude, will determine your altitude. People often say that motivation doesn’t last. Well, neither does bathing—that’s why we recommend it daily."</p>
+            <p class="author">~ Zig Ziglar, Author of "See You at the Top"</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"You are never going to feel ready to make a big change. You must force yourself to take that first step anyway. Confidence is built through action, not from waiting to feel confident."</p>
+            <p class="author">~ Mel Robbins, Speaker and Author of "The 5 Second Rule"</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"When you want to succeed as bad as you want to breathe, then you’ll be successful. Pain is temporary. It may last for a minute, an hour, or a day, but if you quit, it will last forever."</p>
+            <p class="author">~ Eric Thomas (ET the Hip Hop Preacher), Speaker and Author of "The Secret to Success"</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"Don’t wish it were easier. Wish you were better. Motivation is what gets you started. Habit is what keeps you going. Success is nothing more than a few simple disciplines practiced every day."</p>
+            <p class="author">~ Jim Rohn, Business Philosopher and Author</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"Courage starts with showing up and letting ourselves be seen. Vulnerability is not weakness; it’s our greatest measure of courage. Owning your story can be hard, but not nearly as hard as spending your life running from it."</p>
+            <p class="author">~ Brené Brown, Speaker and Author of "Daring Greatly"</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"People don’t buy what you do; they buy why you do it. And what you do simply proves what you believe. Working hard for something we don’t care about is called stress; working hard for something we love is called passion."</p>
+            <p class="author">~ Simon Sinek, Speaker and Author of "Start With Why"</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"Dream big, start small, act now. Success is not a function of the number of hours you work; it’s about the quality of your work. Own your mornings, elevate your life."</p>
+            <p class="author">~ Robin Sharma, Author of "The 5 AM Club"</p>
+        </div>
+
+        <div class="thought">
+            <p class="quote">"When you change the way you look at things, the things you look at change. Don’t die with your music still inside you. Listen to your inner voice and embrace your purpose."</p>
+            <p class="author">~ Dr. Wayne Dyer, Author of "The Power of Intention"</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="logo-container">
+            <img src="./images/logo.jpg" alt="Logo">
+            <h1>SoulSpace</h1>
+        </div>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+    <div class="footer-rights">
+        &copy; 2025 SoulSpace. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    // Smooth Scroll Effect
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

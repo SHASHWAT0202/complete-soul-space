@@ -1,0 +1,235 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #93EBE0, #FFFFF0);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header.hero-section {
+    background: linear-gradient(135deg, #66a6ff, #89f7fe);
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-container h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-buttons a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Header */
+footer {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-rights {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #66a6ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scroll-top:hover {
+    background: #89f7fe;
+}
+
+/* Chatbox Section */
+.chatbox-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatbox-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.chatbox-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.chatbot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #FFFFF0, #93EBE0);
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.faq-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer.footer {
+    background: linear-gradient(135deg, #66a6ff, #89f7fe);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer.footer .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+footer.footer .footer-logo img {
+    height: 30px; /* Smaller footer logo size */
+    width: auto;
+}
+
+footer.footer .footer-logo h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer.footer p {
+    font-size: 1rem;
+    margin: 0;
+}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhujangasana - The cobra pose</title>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #93EBE0 , #FFFFF0);
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        header.hero-section {
+            background: linear-gradient(135deg, #66a6ff, #89f7fe);
+            color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-buttons a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-buttons a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .asana-container {
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, #93EBE0 , #FFFFF0);
+            color: #2c3e50;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .asana-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .asana-header h1 {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .asana-header p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: #f9f9f9;
+        }
+
+        .asana-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            animation: fadeInUp 1s ease;
+        }
+
+        .asana-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: scaleIn 1s ease;
+        }
+
+        .asana-steps {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeInLeft 1s ease;
+        }
+
+        .asana-steps h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .asana-steps ul {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+
+        .asana-steps ul li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .benefits h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        .benefits .benefit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .benefits .benefit-card h3 {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .benefits .benefit-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .benefits .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        footer {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-rights {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        #scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #66a6ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #scroll-top:hover {
+            background: #89f7fe;
+        }
+    </style>
+</head>
+<body>
+    <div class="asana-container">
+        <header class="hero-section">
+            <div class="logo-container">
+                <img src="./images/logo.jpg" alt="Logo">
+                <h1>SoulSpace</h1>
+            </div>
+            <nav class="nav-buttons">
+                <a href="./index.html">Home</a>
+            <a href="./resources.html">Resources</a>
+            <a href="./stillinstress.html">Stillin Stress</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+            </nav>
+        </header>
+
+        <section class="asana-content">
+            <img src="./images/cobra.jpg" alt="Shirshasana - Headstand">
+
+            <div class="asana-steps">
+                <h2>How to Perform Bhujangasana</h2>
+                <ul>
+                    <li>Lie flat on your stomach with your legs extended and toes pointing back. </li>
+                    <li>Place your hands under your shoulders, elbows close to your body.</li>
+                    <li>Press into your palms and lift your chest off the floor, straightening your arms partially or fully.</li>
+                    <li>Keep your shoulders relaxed and down, away from your ears.</li>
+                    <li>Look slightly upward while maintaining length in your neck.</li>
+                    <li>Hold the pose for several breaths and lower back down slowly.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Health Benefits of Bhujangasana</h2>
+            <div class="benefit-card">
+                <h3>Strengthens the spine and improves posture</h3>
+                <p>Regular practice builds upper body strength and stability.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Strengthens the thighs, knees, and ankles</h3>
+                <p>Lift arms overhead, open chest, and draw shoulder blades back.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Stimulates abdominal organs and aids digestion</h3>
+                <p>Twist your torso gently, engaging your core to massage abdominal organs.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Alleviates back pain and sciatica</h3>
+                <p>Try gentle backbends or seated forward folds to decompress the spine.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Opens heart and lungs, improving breathing</h3>
+                <p>Open arms wide, lift chest, and take deep breaths to expand lungs.</p>
+            </div>
+        </section>
+
+        
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="./images/logo.jpg" alt="Logo" style="height: 40px; margin-right: 10px;">
+                <span>SoulSpace</span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-rights">
+            &copy; 2025 SoulSpace. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
