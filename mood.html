@@ -134,6 +134,29 @@
       animation: fadeIn 1s ease-in-out forwards;
     }
   
+    .metrics {
+      margin-top: 10px;
+      font-size: 1.2em;
+      text-align: center;
+      color: #555;
+    }
+  
+    .indicator-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+  
+    .indicator {
+      height: 100%;
+      width: 0;
+      background-color: #66a6ff;
+      border-radius: 10px;
+    }
+
     .criteria-card, .disclaimer-card {
       margin-top: 20px;
       background: white;
@@ -215,7 +238,6 @@
       }
     }
   </style>
-  
 </head>
 <body>
   <header class="hero-section">
@@ -226,7 +248,7 @@
     <nav class="nav-buttons">
       <a href="./index.html">Home</a>
       <a href="./resources.html">Resources</a>
-      <a href="./stillinstress.html">Stillin Stress</a>
+      <a href="./stillinstress.html">Still in Stress</a>
       <a href="./about.html">About Us</a>
       <a href="./contact.html">Contact Us</a>
     </nav>
@@ -268,114 +290,134 @@
         </div>
       </div>
       <div class="question">
-        <p>5. How do you feel about your daily life?</p>
+        <p>5. Do you find it difficult to sleep due to overthinking?</p>
         <div class="options">
-          <label><input type="radio" name="q5" value="happiness"> Content</label>
-          <label><input type="radio" name="q5" value="depression"> Unfulfilled</label>
-          <label><input type="radio" name="q5" value="neutral"> Neutral</label>
-        </div>
-      </div>
-      <!-- Additional Questions for Accuracy -->
-      <div class="question">
-        <p>6. How often do you experience anxiety?</p>
-        <div class="options">
-          <label><input type="radio" name="q6" value="anxiety"> Often</label>
-          <label><input type="radio" name="q6" value="neutral"> Sometimes</label>
-          <label><input type="radio" name="q6" value="happiness"> Rarely</label>
+          <label><input type="radio" name="q5" value="anxiety"> Yes</label>
+          <label><input type="radio" name="q5" value="neutral"> Sometimes</label>
+          <label><input type="radio" name="q5" value="happiness"> No</label>
         </div>
       </div>
       <div class="question">
-        <p>7. How do you cope with stress?</p>
+        <p>6. How would you describe your overall mood most days?</p>
         <div class="options">
-          <label><input type="radio" name="q7" value="anger"> Aggressive</label>
-          <label><input type="radio" name="q7" value="happiness"> Meditative</label>
-          <label><input type="radio" name="q7" value="neutral"> Avoidance</label>
+          <label><input type="radio" name="q6" value="happiness"> Positive</label>
+          <label><input type="radio" name="q6" value="neutral"> Neutral</label>
+          <label><input type="radio" name="q6" value="depression"> Negative</label>
         </div>
       </div>
-      <button type="button" id="submitBtn">Submit</button>
+      <div class="question">
+        <p>7. How often do you feel overwhelmed by life's demands?</p>
+        <div class="options">
+          <label><input type="radio" name="q7" value="anxiety"> Frequently</label>
+          <label><input type="radio" name="q7" value="neutral"> Occasionally</label>
+          <label><input type="radio" name="q7" value="happiness"> Rarely</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>8. Do you feel like you are under constant pressure?</p>
+        <div class="options">
+          <label><input type="radio" name="q8" value="anxiety"> Yes</label>
+          <label><input type="radio" name="q8" value="neutral"> Sometimes</label>
+          <label><input type="radio" name="q8" value="happiness"> No</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>9. How often do you feel overwhelmed by your responsibilities?</p>
+        <div class="options">
+          <label><input type="radio" name="q9" value="anxiety"> Often</label>
+          <label><input type="radio" name="q9" value="neutral"> Occasionally</label>
+          <label><input type="radio" name="q9" value="happiness"> Rarely</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>10. How do you feel about your social interactions?</p>
+        <div class="options">
+          <label><input type="radio" name="q10" value="depression"> Isolated</label>
+          <label><input type="radio" name="q10" value="happiness"> Connected</label>
+          <label><input type="radio" name="q10" value="neutral"> Neutral</label>
+        </div>
+      </div>
     </form>
-    <div class="result" id="result"></div>
-    <!-- Criteria Card -->
-    <div class="criteria-card" id="criteriaCard">
-      <h2>Emotional Wellness Categories</h2>
-      <p><strong>0%-30%</strong>: You're in a healthy emotional state.</p>
-      <p><strong>31%-60%</strong>: You may be experiencing some stress. Consider self-care.</p>
-      <p><strong>61%-90%</strong>: You're showing signs of depression. Seeking professional help is advised.</p>
-      <p><strong>91%-100%</strong>: You're in a critical emotional state. Please consult a professional immediately.</p>
+    <button id="submitBtn">Submit</button>
+  </div>
+
+  <div class="result" id="resultText"></div>
+  <div class="metrics" id="emotionMetrics">
+    <div>Emotion Score: <span id="scorePercentage">0%</span></div>
+    <div class="indicator-bar">
+      <div class="indicator" id="emotionIndicator"></div>
     </div>
-    <!-- Disclaimer Card -->
-    <div class="disclaimer-card" id="disclaimerCard">
-      <h2>Disclaimer</h2>
-      <p>This is just an online model for emotional assessment. For accurate results and professional advice, please consult a licensed healthcare provider.</p>
-    </div>
+  </div>
+  <div class="criteria-card" id="criteriaCard">
+    <h2>Assessment Criteria</h2>
+    <p>The assessment is based on your responses to the questions above. Your emotions are categorized into:</p>
+    <ul>
+      <li><strong>Balanced/Stable:</strong> Positive responses with minimal distress.</li>
+      <li><strong>Occasional Stress:</strong> Symptoms of mild emotional distress, such as anxiety or anger.</li>
+      <li><strong>Emotional Struggles:</strong> Indicators of higher emotional distress, such as depression or chronic anxiety.</li>
+    </ul>
   </div>
 
   <footer>
     <div class="footer-content">
-      <div class="logo-container">
-        <img src="./images/logo.jpg" alt="Logo">
-        <span>SoulSpace</span>
+      <div class="footer-left">
+        <h3>Stay Connected</h3>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+        </div>
       </div>
-      <div class="social-links">
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <div class="footer-rights">
+        <p>&copy; 2025 SoulSpace. All rights reserved.</p>
       </div>
-    </div>
-    <div class="footer-rights">
-      &copy; 2025 SoulSpace. All rights reserved.
     </div>
   </footer>
 
   <script>
     document.getElementById("submitBtn").addEventListener("click", function() {
-      const form = document.getElementById("quizForm");
-      const formData = new FormData(form);
-      const responses = {};
-
-      for (const [key, value] of formData.entries()) {
-        responses[key] = value;
-      }
-
-      const emotionScores = {
-        happiness: 0,
-        sadness: 0,
-        depression: 0,
-        anger: 0,
-        anxiety: 0,
-        neutral: 0
+      var answers = {
+        q1: document.querySelector('input[name="q1"]:checked')?.value,
+        q2: document.querySelector('input[name="q2"]:checked')?.value,
+        q3: document.querySelector('input[name="q3"]:checked')?.value,
+        q4: document.querySelector('input[name="q4"]:checked')?.value,
+        q5: document.querySelector('input[name="q5"]:checked')?.value,
+        q6: document.querySelector('input[name="q6"]:checked')?.value,
+        q7: document.querySelector('input[name="q7"]:checked')?.value,
+        q8: document.querySelector('input[name="q8"]:checked')?.value,
+        q9: document.querySelector('input[name="q9"]:checked')?.value,
+        q10: document.querySelector('input[name="q10"]:checked')?.value
       };
 
-      Object.values(responses).forEach(response => {
-        if (emotionScores.hasOwnProperty(response)) {
-          emotionScores[response]++;
+      var emotionScore = 0;
+
+      // Scoring logic based on answers
+      for (var question in answers) {
+        if (answers[question] === "depression") {
+          emotionScore += 3;
+        } else if (answers[question] === "anxiety") {
+          emotionScore += 2;
+        } else if (answers[question] === "anger") {
+          emotionScore += 1;
         }
-      });
-
-      const totalResponses = Object.values(emotionScores).reduce((a, b) => a + b, 0);
-      const depressionRatio = ((emotionScores["depression"] / totalResponses) * 100).toFixed(2);
-
-      const dominantEmotion = Object.keys(emotionScores).reduce((a, b) => 
-        emotionScores[a] > emotionScores[b] ? a : b
-      );
-
-      const resultDiv = document.getElementById("result");
-      resultDiv.innerHTML = `
-        <p>Your dominant emotion is <strong>${dominantEmotion}</strong>.</p>
-        <p>Depression indicator: <strong>${depressionRatio}%</strong>.</p>
-      `;
-
-      // Update Criteria Card based on depression percentage
-      const criteriaCard = document.getElementById("criteriaCard");
-      if (depressionRatio <= 30) {
-        criteriaCard.innerHTML = "<h2>Emotional Wellness Categories</h2><p><strong>0%-30%</strong>: You're in a healthy emotional state.</p>";
-      } else if (depressionRatio <= 60) {
-        criteriaCard.innerHTML = "<h2>Emotional Wellness Categories</h2><p><strong>31%-60%</strong>: You may be experiencing some stress. Consider self-care.</p>";
-      } else if (depressionRatio <= 90) {
-        criteriaCard.innerHTML = "<h2>Emotional Wellness Categories</h2><p><strong>61%-90%</strong>: You're showing signs of depression. Seeking professional help is advised.</p>";
-      } else {
-        criteriaCard.innerHTML = "<h2>Emotional Wellness Categories</h2><p><strong>91%-100%</strong>: You're in a critical emotional state. Please consult a professional immediately.</p>";
       }
+
+      var resultText = "";
+      if (emotionScore <= 10) {
+        resultText = "You are likely feeling balanced and emotionally stable!";
+      } else if (emotionScore <= 20) {
+        resultText = "You may experience occasional emotional distress. Consider talking to a professional!";
+      } else {
+        resultText = "It seems like you might be struggling with your emotions. Please seek support!";
+      }
+
+      var scorePercentage = Math.min((emotionScore / 30) * 100, 100);
+      document.getElementById("resultText").textContent = resultText;
+      document.getElementById("scorePercentage").textContent = scorePercentage.toFixed(2) + "%";
+      document.getElementById("emotionIndicator").style.width = scorePercentage + "%";
+      document.getElementById("resultText").style.opacity = 1;
+      document.getElementById("emotionMetrics").style.opacity = 1;
+      document.getElementById("criteriaCard").style.opacity = 1;
     });
   </script>
 </body>
